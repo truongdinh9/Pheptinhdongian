@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>222</title>
+</head>
+<body>
+<h1> Calculator </h1>
+<input type="text" id="a">
+<span id="dau"></span>
+<input type="text" id="b">
+<span id="="></span>
+<input type="text" id="rs">
+<hr>
+<input type="button" onclick="cong();" value="+">
+<button onclick="tru()"> -</button>
+<button onclick="nhan()"> x</button>
+<button onclick="chia()"> /</button>
+<script>
+    function cong() {
+        var avl = parseFloat(document.getElementById("a").value);
+        var bvl = parseFloat(document.getElementById("b").value);
+        var result = (document.getElementById("rs"));
+        result.value = avl + bvl
+        document.getElementById("dau").innerHTML = "+"
+        document.getElementById("=").innerHTML = "="
+    }
+
+    function tru() {
+        document.getElementById("dau").innerHTML = "-"
+        document.getElementById("=").innerHTML = "="
+        rs.value = parseFloat(a.value) - parseFloat(b.value)
+    }
+
+    function nhan() {
+        document.getElementById("dau").innerHTML = "x"
+        document.getElementById("=").innerHTML = "="
+        rs.value = parseFloat(a.value) * parseFloat(b.value)
+    }
+
+    function chia() {
+        document.getElementById("dau").innerHTML = "/"
+        document.getElementById("=").innerHTML = "="
+        rs.value = parseFloat(a.value) / parseFloat(b.value)
+    }
+</script>
+</body>
+</html>
